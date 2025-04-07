@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML5 Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            display: grid;
+            grid-gap: 15px;
+            max-width: 600px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete HTML5 Example Page</h1>
+        <p>Demonstrating various HTML5 elements and features</p>
+    </header>
+
+    <!-- Ordered List Section -->
+    <section id="ordered-list">
+        <h2>Ordered List with Roman Numerals</h2>
+        <ol type="I">
+            <li>First item with Roman numeral</li>
+            <li>Second item with Roman numeral</li>
+            <li>Third item with Roman numeral</li>
+            <li>Fourth item with Roman numeral</li>
+            <li>Fifth item with Roman numeral</li>
+        </ol>
+    </section>
+
+    <!-- Image Section -->
+    <section id="image">
+        <h2>External Image from Pexels</h2>
+        <figure>
+            <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" 
+                 alt="Beautiful landscape with river and trees" 
+                 width="600"
+                 height="400">
+            <figcaption>A scenic landscape photo from Pexels.com</figcaption>
+        </figure>
+    </section>
+
+    <!-- Table Section -->
+    <section id="table">
+        <h2>Contacts Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123 Main St, Anytown</td>
+                    <td>555-0101</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Oak Ave, Somewhere</td>
+                    <td>555-0102</td>
+                    <td>jane@example.com</td>
+                </tr>
+                <tr>
+                    <td>Robert Johnson</td>
+                    <td>789 Pine Rd, Nowhere</td>
+                    <td>555-0103</td>
+                    <td>robert@example.com</td>
+                </tr>
+                <tr>
+                    <td>Emily Davis</td>
+                    <td>321 Elm Blvd, Anywhere</td>
+                    <td>555-0104</td>
+                    <td>emily@example.com</td>
+                </tr>
+                <tr>
+                    <td>Michael Wilson</td>
+                    <td>654 Maple Ln, Everywhere</td>
+                    <td>555-0105</td>
+                    <td>michael@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="registration-form">
+        <h2>Registration Form</h2>
+        <form id="register" action="/submit" method="post" novalidate>
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" 
+                       placeholder="Enter your full name" 
+                       required 
+                       minlength="3"
+                       pattern="[A-Za-z ]+">
+                <small>Must be at least 3 characters (letters only)</small>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" 
+                       placeholder="Enter your email address" 
+                       required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Create a password" 
+                       required 
+                       minlength="8"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <small>Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters</small>
+            </div>
+
+            <!-- Date Field -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" 
+                       required>
+            </div>
+
+            <!-- Dropdown Field -->
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <label>Interests:</label>
+                <div>
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="reading" name="interests" value="reading">
+                    <label for="reading">Reading</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="travel" name="interests" value="travel">
+                    <label for="travel">Travel</label>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" 
+                          placeholder="Tell us about yourself" 
+                          maxlength="500"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Multimedia Section -->
+    <section id="multimedia">
+        <h2>Multimedia Elements</h2>
+        
+        <h3>Video Example</h3>
+        <video width="600" controls>
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <h3>Audio Example</h3>
+        <audio controls>
+            <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Example Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
